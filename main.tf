@@ -9,7 +9,7 @@ terraform {
 provider "aws" {
   access_key = var.access_key
   secret_key = var.secret_key
-  region = var.region_name
+  region = "ap-south-1"
 }
  
 variable "access_key"{
@@ -20,7 +20,7 @@ variable "secret_key"{
 }
 variable "region_name"{
    type = string
-   default = "us-east-1"
+   default = "ap-south-1"
 }
 resource "aws_instance" "myec2" {
   ami                    = "ami-0f58b397bc5c1f2e8"
